@@ -39,6 +39,11 @@
         "show_text_below": false
       }
     },
+    "2c09af50-bcc7-4be9-995e-c4dbb4596a3a": {
+      "type": "react-app",
+      "settings": {
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -69,6 +74,7 @@
   },
   "order": [
     "image_banner",
+    "2c09af50-bcc7-4be9-995e-c4dbb4596a3a",
     "featured_collection"
   ]
 }
