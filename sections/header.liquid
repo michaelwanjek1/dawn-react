@@ -15,6 +15,9 @@
   {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
 {%- endif -%}
 
+
+<script defer type="module" src="{{ "cart-tool-tip.bundle.js" | asset_url }}"></script>
+
 {%- if settings.cart_type == "drawer" -%}
   {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
   {{ 'component-cart.css' | asset_url | stylesheet_tag }}
@@ -327,10 +330,10 @@
         {%- endcase -%}
       {%- endfor -%}
 
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+      <span class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         {%- liquid
           if cart == empty
-            render 'icon-cart-empty'
+            render 'react-cart-tool-tip'
           else
             render 'icon-cart'
           endif
@@ -344,7 +347,7 @@
             <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
           </div>
         {%- endif -%}
-      </a>
+      </span>
     </div>
   </header>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
