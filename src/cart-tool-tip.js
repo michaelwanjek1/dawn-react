@@ -4,4 +4,4 @@ import { CartToolTip } from "./components/CartToolTip"
 
 const rootEl = document.getElementById("react-cart-tool-tip")
 
-rootEl && ReactDOM.render(CartToolTip, rootEl)
+rootEl && ReactDOM.render(<CartToolTip />, rootEl)
